@@ -93,7 +93,7 @@ To run the application locally, follow these steps:
 
 4. Use an API client like Postman to make requests to the endpoints described above.
 
-##Docker Guide
+## Docker Guide
 This guide provides instructions on how to run the Receipt Processor application using Docker.
 
 ### Prerequisites
