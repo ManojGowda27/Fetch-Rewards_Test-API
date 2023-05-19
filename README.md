@@ -14,8 +14,8 @@ The application exposes the following API endpoints:
 
 Request:
 ```
-    - POST /receipts/process
-    - Content-Type: application/json
+ - POST /receipts/process
+ - Content-Type: application/json
 
 {
   "retailer": "Target",
@@ -87,26 +87,23 @@ Here are the steps to install npm:
 4. Once the installation is complete, open a new terminal or command prompt.
 
 5. To verify that Node.js and npm are installed correctly, run the following command:
-
 ### macOS
 
-   ```
-   node -v
-   ```
-
+ ```
+ node -v
+ ```
 ### windows OS
 
-   ```
-   node -v
-   ```
-
+```
+node -v
+```
 This will display the installed version of Node.js.
 
 6. Similarly, check the version of npm by running the following command:
 
-      ```
-      npm -v
-      ```
+   ```
+   npm -v
+   ```
 
 This will display the installed version of npm.
 
