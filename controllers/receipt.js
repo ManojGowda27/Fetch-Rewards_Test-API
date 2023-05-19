@@ -8,7 +8,7 @@ exports.receiptById = (req, res) => {
     const {id} = req.params
     
     if (!receipts.has(id)) {
-        res.status(400).json('receipt_id not found');
+        return res.status(400).json('receipt_id not found');
     }
 
     return res.status(200).json({points: receipts.get(id)});
@@ -29,7 +29,7 @@ exports.processReceipt = (req, res) => {
     return res.status(200).json({id: receiptId})
 }
 
-function totalPoints(receipt) {
+exports.totalPoints = (receipt)  => {
     let points = 0
     
     const retailerName = receipt.retailer
@@ -84,4 +84,3 @@ function totalPoints(receipt) {
  
    return points
  }
-

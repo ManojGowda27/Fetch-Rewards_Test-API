@@ -4,25 +4,21 @@
   "description": "Processing Receipt and Finalizing Points",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js",
-    "test": "mocha './util/validate.test.js'"
+    "dev": "nodemon server.js",
+    "test": "mocha \"./**/*.spec.js\""
   },
   "author": "Manoj Gowda",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "bunyan": "^1.8.15",
-    "chai": "^4.3.7",
-    "chai-http": "^4.3.0",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
-    "pino": "^8.14.1",
-    "pino-http": "^8.3.3",
-    "uniqid": "^5.4.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "glob": "^10.2.5",
     "mocha": "^10.2.0",
     "nodemon": "^2.0.22",
     "supertest": "^6.3.3"

@@ -114,24 +114,7 @@ You can now proceed to use npm to manage packages and dependencies for your Node
 
 ## Development Setup
 
-To run the application locally, follow these steps:
-
-   1. Install the dependencies:
-       ```
-       npm install
-
-       ```
-   2. Start the server:
-       ```
-
-       npm run devStart
-
-       ```
-      The server will start running at **http://localhost:8000**.
-
-   3. Use an API client like Postman to make requests to the endpoints described above.
-
-## Docker Guide
+### Docker Guide
 This guide provides instructions on how to run the Receipt Processor application using Docker.
 
 ### Prerequisites
@@ -158,6 +141,24 @@ To run the Receipt Processor application using Docker, follow these steps:
 
    Open your web browser and go to http://localhost:<host-port> to access the application. If you specified a different host port, use that instead.
 
+To run the application locally, follow these steps:
+
+   1. Install the dependencies:
+       ```
+       npm install
+
+       ```
+   2. Start the server:
+       ```
+
+       npm run devStart
+
+       ```
+      The server will start running at **http://localhost:8000**.
+
+   3. Use an API client like Postman to make requests to the endpoints described above.
+
+
 ## Testing
 
 To run unit tests, run the following command:
@@ -171,5 +172,6 @@ The tests are implemented using the Mocha testing framework.
 - Node.js - JavaScript runtime environment
 - Express.js - Web application framework for Node.js
 - Mocha (for testing) - Testing framework
+- Chai (for testing) - Assertion library
 - NPM Packages
 - Docker - Containerization platform
