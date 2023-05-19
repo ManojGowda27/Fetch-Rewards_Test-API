@@ -97,13 +97,14 @@ Here are the steps to install npm:
 ```
 node -v
 ```
+
 This will display the installed version of Node.js.
 
 6. Similarly, check the version of npm by running the following command:
 
-   ```
-   npm -v
-   ```
+```
+npm -v
+```
 
 This will display the installed version of npm.
 
