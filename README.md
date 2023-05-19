@@ -133,7 +133,7 @@ To run the Receipt Processor application using Docker, follow these steps:
 
    2. Run the Docker image:
    ```
-   docker run -p <host-port>:<container-port> receipt-processor
+   docker run -p 8000:8000 receipt-processor
    ```
    Replace <host-port> with the port number on your host machine where you want to access the application, and <container-port> with the exposed port specified in the Dockerfile.
 
