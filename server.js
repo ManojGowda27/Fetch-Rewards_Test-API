@@ -1,18 +1,16 @@
 const express = require('express')
-const processReceiptRouter = require('./routes/processReceipt')
-const getPointsRouter = require('./routes/getPoints')
+
+const receipts = require('./routes/receipts/receipt')
 const app = express()
 
+const port = 8000
 
 app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
 // Using the route files as middleware
+app.use('/receipts', receipts)
 
-app.use('/receipts/process', processReceiptRouter)
-app.use('/receipts/:id/points', getPointsRouter)
-
-   
-
-app.listen(3000, () => console.log('Server Started'))
+app.listen(port, () => console.log(`Listening to Server on Port: ${port}`))
 
 module.exports = app
