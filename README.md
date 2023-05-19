@@ -15,12 +15,44 @@ The application exposes the following API endpoints:
 - Response: JSON containing an ID for the receipt
 - Description: Takes in a JSON receipt and returns a JSON object with a generated ID. The ID is used to fetch the number of points awarded for the receipt.
 
+Request:
+    ```
+    POST /receipts/process
+    Content-Type: application/json
+
+        {
+            "retailer": "Target",
+            "purchaseDate": "2022-01-01",
+            "purchaseTime": "13:01",
+            "items": [
+                {
+                "shortDescription": "Mountain Dew 12PK",
+                "price": "6.49"
+                },{
+                "shortDescription": "Emils Cheese Pizza",
+                "price": "12.25"
+                },{
+                "shortDescription": "Knorr Creamy Chicken",
+                "price": "1.26"
+                },{
+                "shortDescription": "Doritos Nacho Cheese",
+                "price": "3.35"
+                },{
+                "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+                "price": "12.00"
+                }
+            ],
+            "total": "35.35"
+        }
+
+    ```
+
 Response:
-```
+    ```
 
-{"id": "bb3cf704-8371-438b-8a21-e43cf2904bf0"}
+    {"id": "bb3cf704-8371-438b-8a21-e43cf2904bf0"}
 
-```
+    ```
 
 ### Get Points
 - Endpoint: `/receipts/{id}/points`
@@ -28,10 +60,17 @@ Response:
 - Response: JSON object containing the number of points awarded for the receipt ID
 - Description: Fetches the number of points awarded for a specific receipt ID.
 
+Request:
+```
+
+GET /receipts/bb3cf704-8371-438b-8a21-e43cf2904bf0/points
+
+```
+
 Response:
 ```
 
-{"points": 106}
+{"points": 28}
 
 ```
 
@@ -50,6 +89,14 @@ Here are the steps to install npm:
 4. Once the installation is complete, open a new terminal or command prompt.
 
 5. To verify that Node.js and npm are installed correctly, run the following command:
+
+### macOS
+
+   ```
+   node -v
+   ```
+
+### windows OS
 
    ```
    node -v
@@ -73,17 +120,12 @@ You can now proceed to use npm to manage packages and dependencies for your Node
 
 To run the application locally, follow these steps:
 
-   1. Clone the repositiry:
-      ```
-       git clone 
-
-      ```
-   2. Install the dependencies:
+   1. Install the dependencies:
        ```
        npm install
 
        ```
-   3. Start the server:
+   2. Start the server:
        ```
 
        npm run devStart
@@ -91,7 +133,7 @@ To run the application locally, follow these steps:
        ```
       The server will start running at **http://localhost:8000**.
 
-   4. Use an API client like Postman to make requests to the endpoints described above.
+   3. Use an API client like Postman to make requests to the endpoints described above.
 
 ## Docker Guide
 This guide provides instructions on how to run the Receipt Processor application using Docker.
@@ -103,30 +145,20 @@ Before proceeding, ensure that you have the following installed on your system:
 ### Getting Started
 To run the Receipt Processor application using Docker, follow these steps:
 
-   1. Clone the repository:
-   ```
-   git clone 
-
-   ```
-   2. Navigate to the receipt-processor directory:
-   ```
-   cd receipt processor 
-
-   ```
-   3. Build the Docker image:
+   1. Build the Docker image:
    ```
 
    docker build -t receipt-processor .
 
    ```
 
-   4. Run the Docker image:
+   2. Run the Docker image:
    ```
    docker run -p <host-port>:<container-port> receipt-processor
    ```
    Replace <host-port> with the port number on your host machine where you want to access the application, and <container-port> with the exposed port specified in the Dockerfile.
 
-   5. Access the Receipt Processor application:
+   3. Access the Receipt Processor application:
 
    Open your web browser and go to http://localhost:<host-port> to access the application. If you specified a different host port, use that instead.
 
