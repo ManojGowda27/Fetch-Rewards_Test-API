@@ -13,9 +13,9 @@ The application exposes the following API endpoints:
 - Description: Takes in a JSON receipt and returns a JSON object with a generated ID. The ID is used to fetch the number of points awarded for the receipt.
 
 Request:
-    ```
-    POST /receipts/process
-    Content-Type: application/json
+```
+    - POST /receipts/process
+    - Content-Type: application/json
 
         {
             "retailer": "Target",
@@ -41,15 +41,14 @@ Request:
             ],
             "total": "35.35"
         }
-
-    ```
+```
 
 Response:
-    ```
+ ```
 
     {"id": "bb3cf704-8371-438b-8a21-e43cf2904bf0"}
 
-    ```
+ ```
 
 ### Get Points
 - Endpoint: `/receipts/{id}/points`
@@ -65,6 +64,7 @@ GET /receipts/bb3cf704-8371-438b-8a21-e43cf2904bf0/points
 ```
 
 Response:
+
 ```
 
 {"points": 28}
