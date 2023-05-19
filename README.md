@@ -98,7 +98,7 @@ This guide provides instructions on how to run the Receipt Processor application
 
 ### Prerequisites
 Before proceeding, ensure that you have the following installed on your system:
-- Docker:[Install Docker](https://www.docker.com/)
+- Docker: [Install Docker](https://www.docker.com/)
 
 ### Getting Started
 To run the Receipt Processor application using Docker, follow these steps:
