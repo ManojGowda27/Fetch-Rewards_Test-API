@@ -2,9 +2,6 @@
 
 The Receipt Processor is a web service that processes receipts and calculates the points earned based on predefined rules. It provides two endpoints: one for processing receipts and generating an ID, and another for retrieving the points awarded for a specific receipt ID.
 
-## Language Selection
-The application supports multiple languages for localization. The language can be selected by setting the `Accept-Language` header in the request to one of the supported languages: English (en) or Spanish (es).
-
 ## API Summary
 The application exposes the following API endpoints:
 
