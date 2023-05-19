@@ -17,36 +17,37 @@ Request:
     - POST /receipts/process
     - Content-Type: application/json
 
-        {
-            "retailer": "Target",
-            "purchaseDate": "2022-01-01",
-            "purchaseTime": "13:01",
-            "items": [
-                {
-                "shortDescription": "Mountain Dew 12PK",
-                "price": "6.49"
-                },{
-                "shortDescription": "Emils Cheese Pizza",
-                "price": "12.25"
-                },{
-                "shortDescription": "Knorr Creamy Chicken",
-                "price": "1.26"
-                },{
-                "shortDescription": "Doritos Nacho Cheese",
-                "price": "3.35"
-                },{
-                "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
-                "price": "12.00"
-                }
-            ],
-            "total": "35.35"
-        }
+{
+  "retailer": "Target",
+  "purchaseDate": "2022-01-01",
+  "purchaseTime": "13:01",
+  "items": [
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },{
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },{
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },{
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },{
+      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+      "price": "12.00"
+    }
+  ],
+  "total": "35.35"
+}
+            
 ```
 
 Response:
  ```
 
-    {"id": "bb3cf704-8371-438b-8a21-e43cf2904bf0"}
+ {"id": "bb3cf704-8371-438b-8a21-e43cf2904bf0"}
 
  ```
 
