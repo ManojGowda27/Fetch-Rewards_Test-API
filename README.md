@@ -72,7 +72,51 @@ Response:
 
 ```
 
-## NPM(Node Package Manager)
+## Development Setup
+
+### Docker Guide
+This guide provides instructions on how to run the Receipt Processor application using Docker.
+
+### Prerequisites
+Before proceeding, ensure that you have the following installed on your system:
+- Docker: [Install Docker](https://www.docker.com/)
+
+### Getting Started
+To run the Receipt Processor application using Docker, follow these steps:
+
+   1. Build the Docker image:
+   ```
+
+   docker build -t receipt-processor .
+
+   ```
+
+   2. Run the Docker image:
+   ```
+   docker run -p 8000:8000 receipt-processor
+   ```
+   3. Access the Receipt Processor application:
+
+   Open your web browser and go to http://localhost:8000 to access the application. If you specified a different host port, use that instead.
+
+To run the application locally, follow these steps:
+
+   1. Install the dependencies:
+       ```
+       npm install
+
+       ```
+   2. Start the server:
+       ```
+
+       npm run dev
+
+       ```
+      The server will start running at **http://localhost:8000**.
+
+   3. Use an API client like Postman to make requests to the endpoints described above.
+
+### NPM(Node Package Manager)
 
 To install npm (Node Package Manager), you need to install Node.js on your system. npm is bundled with Node.js, so when you install Node.js, npm is automatically installed along with it.
 
@@ -111,52 +155,6 @@ This will display the installed version of npm.
 If both commands (node -v and npm -v) return the versions without any errors, it means that npm is successfully installed on your system.
 
 You can now proceed to use npm to manage packages and dependencies for your Node.js projects.
-
-## Development Setup
-
-### Docker Guide
-This guide provides instructions on how to run the Receipt Processor application using Docker.
-
-### Prerequisites
-Before proceeding, ensure that you have the following installed on your system:
-- Docker: [Install Docker](https://www.docker.com/)
-
-### Getting Started
-To run the Receipt Processor application using Docker, follow these steps:
-
-   1. Build the Docker image:
-   ```
-
-   docker build -t receipt-processor .
-
-   ```
-
-   2. Run the Docker image:
-   ```
-   docker run -p 8000:8000 receipt-processor
-   ```
-   Replace <host-port> with the port number on your host machine where you want to access the application, and <container-port> with the exposed port specified in the Dockerfile.
-
-   3. Access the Receipt Processor application:
-
-   Open your web browser and go to http://localhost:<host-port> to access the application. If you specified a different host port, use that instead.
-
-To run the application locally, follow these steps:
-
-   1. Install the dependencies:
-       ```
-       npm install
-
-       ```
-   2. Start the server:
-       ```
-
-       npm run devStart
-
-       ```
-      The server will start running at **http://localhost:8000**.
-
-   3. Use an API client like Postman to make requests to the endpoints described above.
 
 
 ## Testing
